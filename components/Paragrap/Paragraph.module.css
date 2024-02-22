@@ -1,0 +1,17 @@
+.big {
+	font-size: 18px;
+	line-height: 29px;
+}
+
+.medium {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.small {
+	font-size: 16px;
+	line-height: 24px;
+}
+.paragraph {
+	margin: 0;
+}
