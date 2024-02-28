@@ -1,6 +1,6 @@
 'use client';
 import styles from './page.module.css';
-import { Button, HTag, Paragraph, Rating, Tag } from '../components';
+import { Button, HTag, Paragraph, Rating, Tag } from '../../../components';
 import { useState } from 'react';
 
 export default function Home(): JSX.Element {
