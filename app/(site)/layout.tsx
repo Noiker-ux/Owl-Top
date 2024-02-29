@@ -3,6 +3,7 @@ import { Noto_Sans } from 'next/font/google';
 import './globals.css';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
+import style from './layout.module.css';
 import { Sidebar } from './components/Sidebar/Sidebar';
 
 const NotoSans = Noto_Sans({ subsets: ['latin'] });
@@ -16,12 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
 	return (
 		<html lang='ru'>
 			<body className={NotoSans.className}>
-				<Header />
-				<div>
-					<Sidebar />
-					{children}
+				<div className={style.wrapper}>
+					<Header className={style.header} />
+					<Sidebar className={style.sidebar} />
+					<div className={style.body}>{children}</div>
+					<Footer className={style.footer} />
 				</div>
-				<Footer />
 			</body>
 		</html>
 	);
