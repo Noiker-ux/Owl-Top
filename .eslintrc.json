@@ -8,8 +8,8 @@
 		"@typescript-eslint/adjacent-overload-signatures": "error", //Группировка похожих элементов
 		"@typescript-eslint/array-type": "error", //Вся типизация массивов только через [], пример string[]
 		"@typescript-eslint/ban-types": "error", //Вся типизация должна быть
-		"@typescript-eslint/explicit-function-return-type": "error", //Требует типизации возврата функции
-		"@typescript-eslint/explicit-module-boundary-types": "error", //Требует типизации возврата функции
+		// "@typescript-eslint/explicit-function-return-type": "error", //Требует типизации возврата функции
+		// "@typescript-eslint/explicit-module-boundary-types": "error", //Требует типизации возврата функции
 		"@typescript-eslint/no-extra-non-null-assertion": "error", //Требует корректных ! и ? для TS
 		"@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error", //Улучшает обработку ! + ??
 		"@typescript-eslint/no-non-null-asserted-optional-chain": "error", //Требует убрать ! в конце
@@ -17,8 +17,9 @@
 		"space-before-blocks": "off", //Откл базовое поведение
 		"@typescript-eslint/space-before-blocks": "error", // Добавить пробел после открытия блока логики функции
 		"@typescript-eslint/type-annotation-spacing": "error", //Правильные отступы
-		"@typescript-eslint/no-unused-vars": "warn", //подчеркивать неиспользуемые переменные
+		"@typescript-eslint/no-unused-vars": "off", //подчеркивать неиспользуемые переменные
 		"@typescript-eslint/no-explicit-any": "warn", //Подчеркивать any
+		"@next/next/no-async-client-component": "off",
 		"@typescript-eslint/no-empty-interface": [
 			//чтобы гарантировать, что в коде объявлены только значимые интерфейсы.
 			"error",
