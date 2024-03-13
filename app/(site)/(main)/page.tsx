@@ -1,11 +1,7 @@
-'use client';
 import styles from './page.module.css';
 import { Button, HTag, Paragraph, Rating, Tag } from '../../../components';
-import { useState } from 'react';
 
 export default async function Home() {
-	const [rating, setRating] = useState<number>(4);
-
 	return (
 		<main className={styles.main}>
 			<HTag tag='h1'>Текст</HTag>
@@ -26,7 +22,6 @@ export default async function Home() {
 			<Tag size='medium' color='primary'>
 				primary
 			</Tag>
-			<Rating rating={rating} setRating={setRating} isEditable={true} />
 		</main>
 	);
 }
