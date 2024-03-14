@@ -2,6 +2,7 @@ import IFooterProps from './Footer.props';
 import style from './Footer.module.css';
 import classNames from 'classnames';
 
+
 export const Footer = ({ className, ...props }: IFooterProps): JSX.Element => {
 	return (
 		<footer className={classNames(className, style.footer)} {...props}>
@@ -12,6 +13,7 @@ export const Footer = ({ className, ...props }: IFooterProps): JSX.Element => {
 			<a href='#' target='blank'>
 				Политика конфиденциальности
 			</a>
+		
 		</footer>
 	);
 };

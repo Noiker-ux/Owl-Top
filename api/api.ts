@@ -9,13 +9,7 @@ export async function getMenu(firstCategory: number): Promise<MenuItem[]> {
 			firstCategory,
 		}),
 		headers: new Headers({ 'content-type': 'application/json' }),
-	});
-	return res.json();
-}
-
-export async function getPage(alias: string) {
-	const res = await fetch(API.topPage.byAlias + alias, {
-		next: { revalidate: 10 },
+		cache: 'no-store',
 	});
 	return res.json();
 }

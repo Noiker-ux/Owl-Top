@@ -23,7 +23,7 @@
 	margin-bottom: 10px;
 	cursor: pointer;
 	text-transform: uppercase;
-
+	display: block;
 	color: var(--gray-dark);
 	font-size: 12px;
 	font-weight: 300;
@@ -39,6 +39,7 @@
 }
 .secondLevelBlockOpened {
 	display: block;
+	color: var(--primary-color);
 	margin-bottom: 20px;
 }
 
