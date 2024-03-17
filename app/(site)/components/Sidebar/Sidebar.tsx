@@ -2,13 +2,29 @@ import ISidebarProps from './Sidebar.props';
 import style from './Sidebar.module.css';
 import classNames from 'classnames';
 import { Menu } from '../Menu/Menu';
-import { getMenu } from '../../../../api/api';
+import Logo from '../../logo.svg';
+import { ActionGet, getServerPathname } from '@/actions/action';
 import { cookies } from 'next/headers';
+import { firstLevelMenu } from '../../../../const/FirstLvl';
+import { MenuProvider } from '../Menu/MenuContext';
 
-export async function Sidebar({ ...props }: ISidebarProps) {
+export async function Sidebar({ className, ...props }: ISidebarProps) {
+	const pathname = await getServerPathname();
+	const firstLevelMenuIDX = firstLevelMenu.findIndex((e) => pathname?.includes(e.route));
+	const menu = await ActionGet();
+	const secondMenuIndex = menu.findIndex((el) => {
+		return el.pages.findIndex((page) => pathname?.includes(page.alias)) !== -1;
+	});
 	return (
-		<div {...props}>
-			<Menu />
+		<div className={classNames(style.sidebar, className)} {...props}>
+			<Logo className={style.logo} />
+			<div>поиск</div>
+			<MenuProvider
+				firstLvlIndex={firstLevelMenuIDX}
+				secondMenuIndex={secondMenuIndex}
+				firstLevelMenu={menu}>
+				<Menu />
+			</MenuProvider>
 		</div>
 	);
 }

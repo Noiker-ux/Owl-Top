@@ -1,0 +1,26 @@
+.firstLevel {
+	display: grid;
+	grid-template-columns: 24px 1fr;
+	gap: 10px;
+	align-items: center;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 25px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.firstLevelActive,
+.firstLevel:hover {
+	color: var(--primary-color);
+}
+
+.firstLevelActive svg,
+.firstLevel:hover svg {
+	fill: #7653fc;
+}
+.secondBlock {
+	margin: 10px 0 10px 12px;
+	padding-left: 32px;
+	border-left: 1px solid #797777;
+}

@@ -1,0 +1,27 @@
+.secondLevel {
+	margin-bottom: 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: block;
+	color: var(--gray-dark);
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
+}
+.secondBlock {
+	margin: 10px 0 10px 12px;
+	padding-left: 32px;
+	border-left: 1px solid #797777;
+}
+.secondLevelBlock {
+	display: none;
+}
+.secondLevelBlockOpened {
+	display: block;
+	color: var(--primary-color);
+}
+.thirdLevelBlock {
+	padding-left: 10px;
+	margin-top: 10px;
+	border-left: 1px solid #797777;
+}
