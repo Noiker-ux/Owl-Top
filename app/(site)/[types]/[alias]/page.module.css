@@ -1,0 +1,32 @@
+.seo h1 {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 35px;
+	margin: 0;
+}
+.seo h2 {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.seo h3 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.seo ul,
+.seo ol {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.seo ul li {
+	margin-top: 10px;
+}
+.seo p {
+	margin-top: 10px;
+}
