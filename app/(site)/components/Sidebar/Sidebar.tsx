@@ -7,6 +7,7 @@ import { ActionGet, getServerPathname } from '@/actions/action';
 import { cookies } from 'next/headers';
 import { firstLevelMenu } from '../../../../const/FirstLvl';
 import { MenuProvider } from '../Menu/MenuContext';
+import { Search } from '@/components';
 
 export async function Sidebar({ className, ...props }: ISidebarProps) {
 	const pathname = await getServerPathname();
@@ -18,7 +19,7 @@ export async function Sidebar({ className, ...props }: ISidebarProps) {
 	return (
 		<div className={classNames(style.sidebar, className)} {...props}>
 			<Logo className={style.logo} />
-			<div>поиск</div>
+			<Search />
 			<MenuProvider
 				firstLvlIndex={firstLevelMenuIDX}
 				secondMenuIndex={secondMenuIndex}

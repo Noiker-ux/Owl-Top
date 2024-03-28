@@ -3,3 +3,7 @@ export * from './Button/Button';
 export * from './Paragrap/Paragraph';
 export * from './Tag/Tag';
 export * from './Rating/Rating';
+export * from './Input/Input';
+export * from './TextArea/TextArea';
+export * from './Search/Search';
+export * from './Divider/Divider';

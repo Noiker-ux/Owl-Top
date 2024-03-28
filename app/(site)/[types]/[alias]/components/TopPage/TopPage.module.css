@@ -5,3 +5,6 @@
 	justify-items: left;
 	gap: 20px;
 }
+.products {
+	grid-column: 1 / -1;
+}

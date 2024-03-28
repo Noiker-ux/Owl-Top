@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import { Button, HTag, Paragraph, Rating, Tag } from '../../../components';
+import { Button, HTag, Input, Paragraph, Rating, Tag, TextArea } from '../../../components';
 
 export default async function Home() {
 	return (
@@ -22,6 +22,8 @@ export default async function Home() {
 			<Tag size='medium' color='primary'>
 				primary
 			</Tag>
+			<Input placeholder='тест' />
+			<TextArea placeholder='чумба юмба'></TextArea>
 		</main>
 	);
 }

@@ -3,6 +3,7 @@ import style from './Vacancy.module.css';
 import IVacancy from './Vacancy.props';
 import { Card } from '../Card/Card';
 import RateIcon from './VacancyRating.svg';
+import PriceRu from '@/utils/priceRu';
 
 export const Vacancy = ({
 	category,
@@ -23,22 +24,14 @@ export const Vacancy = ({
 				{countVacancy && (
 					<Card color='white' className={style.hhcount}>
 						<div className={style.title}>Всего вакансий</div>
-						<div className={style.hhCount}>
-							{new Intl.NumberFormat('ru-RU').format(countVacancy)}
-						</div>
+						<div className={style.hhCount}>{PriceRu(countVacancy)}</div>
 					</Card>
 				)}
 				{juniorSalary && middleSalary && seniorSalary && (
 					<Card color='white' className={style.salary}>
 						<div>
 							<div className={style.title}>Начальный</div>
-							<div className={style.salaryValue}>
-								{new Intl.NumberFormat('ru', {
-									style: 'currency',
-									currency: 'RUB',
-									minimumFractionDigits: 0,
-								}).format(juniorSalary)}
-							</div>
+							<div className={style.salaryValue}>{PriceRu(juniorSalary)}</div>
 							<div className={style.rate}>
 								<RateIcon className={style.filled} />
 								<RateIcon />
@@ -47,13 +40,7 @@ export const Vacancy = ({
 						</div>
 						<div>
 							<div className={style.title}>Средний</div>
-							<div className={style.salaryValue}>
-								{new Intl.NumberFormat('ru', {
-									style: 'currency',
-									currency: 'RUB',
-									minimumFractionDigits: 0,
-								}).format(middleSalary)}
-							</div>
+							<div className={style.salaryValue}>{PriceRu(middleSalary)}</div>
 							<div className={style.rate}>
 								<RateIcon className={style.filled} />
 								<RateIcon className={style.filled} />
@@ -62,13 +49,7 @@ export const Vacancy = ({
 						</div>
 						<div>
 							<div className={style.title}>Профессионал</div>
-							<div className={style.salaryValue}>
-								{new Intl.NumberFormat('ru', {
-									style: 'currency',
-									currency: 'RUB',
-									minimumFractionDigits: 0,
-								}).format(seniorSalary)}
-							</div>
+							<div className={style.salaryValue}>{PriceRu(seniorSalary)}</div>
 							<div className={style.rate}>
 								<RateIcon className={style.filled} />
 								<RateIcon className={style.filled} />

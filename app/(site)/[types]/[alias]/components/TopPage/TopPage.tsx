@@ -6,6 +6,7 @@ import { Sort } from '../Sort/Sort';
 import { SortEnum } from '../Sort/Sort.props';
 import { useReducer } from 'react';
 import { SortReducer } from '../sort.reducer';
+import { Product } from '../Product/Product';
 
 export const TopPage = ({ title, products }: ITopPage) => {
 	const [{ products: sortProducts, sort }, dispatchSort] = useReducer(SortReducer, {
@@ -26,9 +27,9 @@ export const TopPage = ({ title, products }: ITopPage) => {
 				</Tag>
 			)}
 			<Sort sort={sort} setSort={setSort} />
-			<div>
-				{products.map((p) => (
-					<div key={p._id}>{p.title}</div>
+			<div className={style.products}>
+				{sortProducts.map((p) => (
+					<Product key={p._id} product={p} />
 				))}
 			</div>
 		</div>
