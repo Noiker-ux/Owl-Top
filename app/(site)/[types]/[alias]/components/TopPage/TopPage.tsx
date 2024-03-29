@@ -4,18 +4,21 @@ import style from './TopPage.module.css';
 import ITopPage from './TopPage.props';
 import { Sort } from '../Sort/Sort';
 import { SortEnum } from '../Sort/Sort.props';
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 import { SortReducer } from '../sort.reducer';
 import { Product } from '../Product/Product';
 
 export const TopPage = ({ title, products }: ITopPage) => {
-	const [{ products: sortProducts, sort }, dispatchSort] = useReducer(SortReducer, {
+	const [sorter, setSorter] = useState<'asc' | 'desc'>('desc');
+	const [{ products: sortProducts, sort, filter }, dispatchSort] = useReducer(SortReducer, {
 		products,
 		sort: SortEnum.Rating,
+		filter: sorter,
 	});
 
 	const setSort = (sort: SortEnum) => {
-		dispatchSort({ type: sort });
+		sorter === 'asc' ? setSorter('desc') : setSorter('asc');
+		dispatchSort({ type: sort, filter: sorter });
 	};
 
 	return (
@@ -26,7 +29,7 @@ export const TopPage = ({ title, products }: ITopPage) => {
 					{products.length}
 				</Tag>
 			)}
-			<Sort sort={sort} setSort={setSort} />
+			<Sort sort={sort} setSort={setSort} filter={filter} />
 			<div className={style.products}>
 				{sortProducts.map((p) => (
 					<Product key={p._id} product={p} />

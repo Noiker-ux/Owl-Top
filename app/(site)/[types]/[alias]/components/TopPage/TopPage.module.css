@@ -8,3 +8,9 @@
 .products {
 	grid-column: 1 / -1;
 }
+@media screen and (max-width: 640px) {
+	.title {
+		grid-template-columns: 1fr;
+		margin-bottom: 30px;
+	}
+}

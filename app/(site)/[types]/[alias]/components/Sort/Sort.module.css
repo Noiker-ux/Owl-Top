@@ -26,3 +26,9 @@
 .sort span:not(.active) {
 	grid-template-columns: 1fr;
 }
+.asc {
+	transform: scale(1, -1);
+}
+.desc {
+	transform: none;
+}
