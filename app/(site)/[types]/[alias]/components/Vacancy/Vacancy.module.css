@@ -3,6 +3,10 @@
 	align-items: center;
 	gap: 20px;
 }
+.hhwrapper {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 .hh {
 	display: grid;

@@ -12,3 +12,15 @@
 .input::placeholder {
 	color: var(--gray-dark);
 }
+.error {
+	border: 1px solid red;
+}
+.inputWrapperr {
+	position: relative;
+}
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: red;
+}

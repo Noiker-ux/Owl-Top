@@ -4,6 +4,7 @@ import IVacancy from './Vacancy.props';
 import { Card } from '../Card/Card';
 import RateIcon from './VacancyRating.svg';
 import PriceRu from '@/utils/priceRu';
+import classNames from 'classnames';
 
 export const Vacancy = ({
 	category,
@@ -11,9 +12,11 @@ export const Vacancy = ({
 	juniorSalary,
 	middleSalary,
 	seniorSalary,
+	className,
+	...props
 }: IVacancy) => {
 	return (
-		<div className={style.hhwrapper}>
+		<div className={classNames(style.hhwrapper, className)} {...props}>
 			<div className={style.hhtitle}>
 				<HTag tag='h2'>Вакансии - {category}</HTag>
 				<Tag color='red' size='small' className={style.tag}>

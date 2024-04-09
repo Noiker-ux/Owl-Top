@@ -1,6 +1,7 @@
+import { ReviewModel } from '@/interfaces/product.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export default interface ISkills
+export default interface IReviewProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	tags: string[];
+	review: ReviewModel;
 }

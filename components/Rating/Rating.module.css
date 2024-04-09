@@ -7,3 +7,15 @@
 .editable {
 	cursor: pointer;
 }
+.wrapper {
+	position: relative;
+}
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: red;
+}
+.error svg {
+	stroke: red;
+}
