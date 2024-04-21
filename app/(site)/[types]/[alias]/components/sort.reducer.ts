@@ -24,7 +24,7 @@ export const SortReducer = (state: SortReducerState, action: SortActions): SortR
 				return {
 					sort: SortEnum.Rating,
 					products: state.products.sort((a, b) => (a.initialRating > b.initialRating ? -1 : 1)),
-					filter: 'desc',
+					filter: 'asc',
 				};
 			}
 

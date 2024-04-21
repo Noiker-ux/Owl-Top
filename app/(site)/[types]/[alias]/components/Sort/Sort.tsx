@@ -13,8 +13,8 @@ export const Sort = ({ sort, filter, setSort, className, ...props }: ISortProps)
 				})}>
 				<SortIcon
 					className={classNames(style.sortIcon, {
-						[style.asc]: filter === 'asc',
-						[style.desc]: filter === 'desc',
+						[style.asc]: filter === 'asc' && sort == SortEnum.Rating,
+						[style.desc]: filter === 'desc' && sort == SortEnum.Rating,
 					})}
 				/>
 				По рейтингу
